@@ -7,3 +7,7 @@ from rest_framework.decorators import api_view
 @api_view(['GET'])
 def homeView(request):
     return Response({"message" : "My First API project"},status=status.HTTP_200_OK)
+
+
+def index(request):
+    return render(request, 'restaurant/index.html', {})
