@@ -11,10 +11,10 @@ class MenuSerializer(serializers.ModelSerializer):
         
         
 class BookingSerializer(serializers.ModelSerializer):
-    date = serializers.DateTimeField(source = 'booking_date')
+    date = serializers.DateTimeField(source = 'booking_date', read_only = True)
     class Meta:
         model = Booking
-        fields = ['id','name','no_of_guest','date']
+        fields = ['id','name','no_of_guests', 'date']
         
         
 class UserSerializer(serializers.ModelSerializer):
