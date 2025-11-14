@@ -11,7 +11,7 @@ router.register(r'bookings', views.BookingViewset)
 
 
 urlpatterns = [
-    path('', views.index, name = "home"),
+    path('home/', views.index, name = "home"),
     path('restaurant/', include(router.urls)),
     path('api-token-auth/', obtain_auth_token ),
 ]
